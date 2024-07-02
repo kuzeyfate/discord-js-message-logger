@@ -35,7 +35,7 @@ A powerful Discord bot that logs messages from specified channels, with options 
 3. Create a `config.toml` file in the project root:
    ```toml
    bot_token = "your_bot_token_here"
-   timezone = "UTC+1" #optional
+   timezone = "UTC+1" # optional
    ```
 
    Replace `your_bot_token_here` with your actual Discord bot token.
