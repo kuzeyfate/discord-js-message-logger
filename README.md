@@ -20,7 +20,7 @@ A Discord bot that logs messages locally from specified channels using a slash c
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/kuzeyfate/discord-message-logger.git
+   git clone https://github.com/kuzeyfate/discord-js-message-logger.git
    cd discord-message-logger
    ```
 
