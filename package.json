@@ -1,0 +1,43 @@
+{
+  "name": "discord-message-logger",
+  "version": "1.0.0",
+  "description": "A Discord bot that logs messages from a specific user in a given channel",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "nodemon bot.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "message-logger",
+    "discord.js"
+  ],
+  "author": "Kuzeyfate",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "marked": "^4.0.12",
+    "sanitize-html": "^2.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.30.0",
+    "nodemon": "^2.0.20"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kuzeyfate/discord-message-logger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kuzeyfate/discord-message-logger/issues"
+  },
+  "homepage": "https://github.com/kuzeyfate/discord-message-logger#readme"
+}
