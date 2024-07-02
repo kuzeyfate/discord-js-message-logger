@@ -1,20 +1,23 @@
-# Discord Message Logger
+# Discord.js Message Logger
 
-A Discord bot that logs messages locally from specified channels using a slash command, with an option to filter by user.
+A powerful Discord bot that logs messages from specified channels, with options to filter by user and generate both JSON and HTML logs.
 
 ## Features
 
 - Log messages from any channel using a slash command
 - Optional user filtering
-- Export messages to JSON
-- Generate HTML with Discord-style markdown formatting
+- Export messages to JSON format
+- Generate HTML logs with Discord-style markdown formatting
 - Support for Discord markdown (bold, italic, underline, strikethrough, code blocks)
+- Timezone-aware logging with configurable timezone
+- Attachment downloading and linking in HTML logs
+- Customizable via TOML configuration file
 
 ## Prerequisites
 
 - Node.js (v14 or higher)
 - Discord Bot Token
-- Discord Server (Guild) ID
+- Discord Server (Guild) with necessary permissions
 
 ## Installation
 
@@ -29,10 +32,17 @@ A Discord bot that logs messages locally from specified channels using a slash c
    npm install
    ```
 
-3. Create a `.env` file in the project root:
-   ```env
-   BOT_TOKEN=your_bot_token_here
+3. Create a `config.toml` file in the project root:
+   ```toml
+   # Bot configuration
+   bot_token = "your_bot_token_here"
+
+   # Timezone configuration (optional)
+   # Uncomment and set the desired timezone, e.g.:
+   # timezone = "UTC+3"
    ```
+
+   Replace `your_bot_token_here` with your actual Discord bot token.
 
 ## Usage
 
@@ -45,23 +55,37 @@ A Discord bot that logs messages locally from specified channels using a slash c
    ```
    /logmessages channel:#channel-name user:@username
    ```
-   The `user` parameter is optional.
+   The `user` parameter is optional. If omitted, the bot will log all messages in the channel.
 
 3. The bot will:
    - Fetch messages from the specified channel
-   - Save messages to `messages.json`
-   - Generate `messages.html` with formatted messages
+   - Save messages to a JSON file
+   - Generate an HTML file with formatted messages
+   - Download and save attachments
 
-4. Check the generated files:
-   - `messages.json`: Raw data of fetched messages
-   - `messages.html`: Formatted messages viewable in a web browser
+4. Check the generated files in the `logs` directory:
+   - `YYYY-MM-DD_HH-mm-ss.json`: Raw data of fetched messages
+   - `YYYY-MM-DD_HH-mm-ss.html`: Formatted messages viewable in a web browser
+   - `attachments/`: Directory containing downloaded attachments
 
 ## Customization
 
-- Modify output filenames in `bot.js`
-- Adjust HTML styling in the `generateHTML()` function
-- Update markdown parsing in the `parseDiscordMarkdown()` function
+- Modify the HTML styling in the `generateHTML()` function in `logger.js`
+- Adjust markdown parsing in the `parseDiscordMarkdown()` function
+- Update the bot's slash command in the `logger.once('ready', ...)` event handler
 
 ## Contributing
 
-Contributions are welcome. Please open an issue or submit a pull request.
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- [Discord.js](https://discord.js.org/) for the Discord API wrapper
+- [marked](https://marked.js.org/) for Markdown parsing
+- [sanitize-html](https://github.com/apostrophecms/sanitize-html) for HTML sanitization
+- [axios](https://axios-http.com/) for HTTP requests
+- [toml](https://github.com/BinaryMuse/toml-node) for TOML parsing

@@ -1,0 +1,6 @@
+# Bot configuration
+bot_token = "your_bot_token_here"
+
+# Timezone configuration (optional)
+# Uncomment and set the desired timezone, e.g.:
+# timezone = "UTC+1"

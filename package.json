@@ -2,10 +2,10 @@
   "name": "discord-js-message-logger",
   "version": "1.0.0",
   "description": "A Discord bot that logs messages from a specific user in a given channel",
-  "main": "bot.js",
+  "main": "logger.js",
   "scripts": {
-    "start": "node bot.js",
-    "dev": "nodemon bot.js",
+    "start": "node logger.js",
+    "dev": "nodemon logger.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,16 +14,16 @@
     "discord",
     "bot",
     "message-logger",
-    "discord.js"
+    "discord-js"
   ],
   "author": "Kuzeyfate",
   "license": "MIT",
   "dependencies": {
     "axios": "^1.7.2",
     "discord.js": "^14.15.3",
-    "dotenv": "^16.4.5",
     "marked": "^4.0.12",
-    "sanitize-html": "^2.7.0"
+    "sanitize-html": "^2.7.0",
+    "toml": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^8.30.0",
