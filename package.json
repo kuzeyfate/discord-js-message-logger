@@ -1,5 +1,5 @@
 {
-  "name": "discord-message-logger",
+  "name": "discord-js-message-logger",
   "version": "1.0.0",
   "description": "A Discord bot that logs messages from a specific user in a given channel",
   "main": "bot.js",
@@ -34,10 +34,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kuzeyfate/discord-message-logger.git"
+    "url": "https://github.com/kuzeyfate/discord-js-message-logger.git"
   },
   "bugs": {
-    "url": "https://github.com/kuzeyfate/discord-message-logger/issues"
+    "url": "https://github.com/kuzeyfate/discord-js-message-logger/issues"
   },
-  "homepage": "https://github.com/kuzeyfate/discord-message-logger#readme"
+  "homepage": "https://github.com/kuzeyfate/discord-js-message-logger#readme"
 }
